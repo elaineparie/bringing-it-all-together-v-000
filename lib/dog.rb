@@ -2,10 +2,10 @@ require 'pry'
 class Dog
 attr_accessor :name, :breed, :id
 
-def initialize(hash)
-  @name = hash[:name]
-  @breed = hash[:breed]
-  @id = hash[:id]
+def initialize(dog_hash)
+  @name = dog_hash[:name]
+  @breed = dog_hash[:breed]
+  @id = dog_hash[:id]
 end
 
 def self.create_table
