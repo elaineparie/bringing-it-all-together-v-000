@@ -81,4 +81,7 @@ def self.find_by_name(name)
   dog
 end
 
+def update
+end 
+
 end
