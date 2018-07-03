@@ -65,12 +65,11 @@ end
 
 def self.find_or_create_by(hash)
   dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name], hash[:breed])
-
  if !dog.empty?
    dog_data = dog[0]
-   binding.pry
+  dog = self.new_from_db(dog_data)
 
-   song = Song.new(song_data[0], song_data[1], song_data[2])
+   dog = Song.new(song_data[0], song_data[1], song_data[2])
  else
    song = self.create(name: name, album: album)
  end
