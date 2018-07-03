@@ -49,6 +49,12 @@ def self.drop_table
   #end
 end
 
+self.create(hash)
+new_dog = self.new(hash)
+student.save
+student
+end 
+
 
 
 end
