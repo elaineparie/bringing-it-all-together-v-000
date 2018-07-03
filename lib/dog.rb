@@ -4,6 +4,7 @@ attr_accessor :name, :breed, :id
 
 def initialize(dog_hash)
   @name = dog_hash[:name]
+  binding.pry
   @breed = dog_hash[:breed]
   #@id = dog_hash[:id]
 end
@@ -26,7 +27,6 @@ def self.drop_table
 
   def self.new_from_db(row)
   new_dog = self.new(hash)
-  binding.pry
   hash[:name] =  row[1]
   hash[:breed] = row[2]
     hash
