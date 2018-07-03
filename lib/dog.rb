@@ -70,7 +70,7 @@ def self.find_or_create_by(hash)
    dog_data = dog[0]
   dog = self.new_from_db(dog_data)
  else
-   dog = self.create(name: name, album: album)
+   dog = self.create(hash)
  end
  song
 end
