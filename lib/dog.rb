@@ -3,9 +3,9 @@ class Dog
 attr_accessor :name, :breed, :id
 
 def initialize(dog_hash)
-  dog_hash[:name] = @name
-  dog_hash[:breed] = @breed
-dog_hash[:id] = @id
+  @name = dog_hash[:name]
+  @breed = dog_hash[:breed]
+  @id = dog_hash[:id]
 end
 
 def self.create_table
