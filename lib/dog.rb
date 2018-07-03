@@ -45,7 +45,7 @@ def self.drop_table
   dog = DB[:conn].execute(sql)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
     self
-
+binding.pry
   #end
 end
 
