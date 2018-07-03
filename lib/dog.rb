@@ -6,7 +6,6 @@ def initialize(dog_hash)
   @name = dog_hash[:name]
   @breed = dog_hash[:breed]
   @id = dog_hash[:id]
-  binding.pry
 end
 
 def self.create_table
