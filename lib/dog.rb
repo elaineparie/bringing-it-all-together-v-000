@@ -75,5 +75,8 @@ dog
 end
 
 def self.find_by_name
-
+  sql = "SELECT * FROM dogs WHERE name = ?"
+  result = DB[:conn].execute(sql, name)[0]
+  dog = self.new_from_db(result)
+  dog
 end
