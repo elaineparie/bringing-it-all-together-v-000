@@ -26,10 +26,10 @@ def self.drop_table
 
   def self.new_from_db(row)
   new_dog = self.new(:id, :name, :breed)
-  new_student.id = row[0]
-  new_student.name =  row[1]
-  new_student.grade = row[2]
-  new_student
+  new_dog.id = row[0]
+  new_dog.name =  row[1]
+  new_dog.breed = row[2]
+  new_dog
   end
 
 
