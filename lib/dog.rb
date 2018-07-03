@@ -49,7 +49,7 @@ def self.drop_table
   #end
 end
 
-self.create(hash)
+def self.create(hash)
 new_dog = self.new(hash)
 new_dog.save
 new_dog
