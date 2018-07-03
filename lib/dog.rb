@@ -72,7 +72,7 @@ def self.find_or_create_by(hash)
  else
    dog = self.create(hash)
  end
- song
+dog
 end
 
 
