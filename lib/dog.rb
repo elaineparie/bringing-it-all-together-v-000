@@ -24,7 +24,13 @@ def self.drop_table
     DB[:conn].execute(sql)
   end
 
-
+  def self.new_from_db(row)
+  new_dog = self.new(:id, :name, :breed)
+  new_student.id = row[0]
+  new_student.name =  row[1]
+  new_student.grade = row[2]
+  new_student
+  end
 
 
 end
