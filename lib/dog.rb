@@ -64,7 +64,6 @@ def self.find_by_id(id)
 end
 
 def self.find_or_create_by(hash)
-  binding.pry
   dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name], hash[:breed])
  if !dog.empty?
    dog_data = dog[0]
