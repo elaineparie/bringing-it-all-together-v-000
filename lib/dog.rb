@@ -51,9 +51,9 @@ end
 
 self.create(hash)
 new_dog = self.new(hash)
-student.save
-student
-end 
+new_dog.save
+new_dog
+end
 
 
 
