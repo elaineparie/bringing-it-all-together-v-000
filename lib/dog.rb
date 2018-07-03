@@ -80,3 +80,5 @@ def self.find_by_name
   dog = self.new_from_db(result)
   dog
 end
+
+end
