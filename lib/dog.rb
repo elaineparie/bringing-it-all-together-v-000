@@ -30,7 +30,7 @@ def self.drop_table
   hash[:id] = row[0]
   hash[:name] =  row[1]
   hash[:breed] = row[2]
-  new_dog
+  hash
   end
 
 
