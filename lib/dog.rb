@@ -64,13 +64,13 @@ def self.find_by_id(id)
 end
 
 def self.find_or_create_by(hash)
+  binding.pry
   dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name], hash[:breed])
  if !dog.empty?
    dog_data = dog[0]
   dog = self.new_from_db(dog_data)
-  binding.pry
  else
-   song = self.create(name: name, album: album)
+   dog = self.create(name: name, album: album)
  end
  song
 end
