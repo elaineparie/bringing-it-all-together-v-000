@@ -27,7 +27,7 @@ def self.drop_table
     DB[:conn].execute(sql)
   end
 
-  def self.new_from_db(row)
+  #def self.new_from_db(row)
   #new_dog = self.new(dog_hash)
   #new_dog.name =  row[1]
   #new_dog.breed = row[2]
