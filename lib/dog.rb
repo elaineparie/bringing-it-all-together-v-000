@@ -27,9 +27,9 @@ def self.drop_table
 
   def self.new_from_db(row)
   new_dog = self.new(hash)
-  hash[:name] =  row[1]
-  hash[:breed] = row[2]
-    hash
+  new_dog.name =  row[1]
+  new_dog.breed = row[2]
+  new_dog
   end
 
 
