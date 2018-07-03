@@ -28,8 +28,8 @@ def self.drop_table
   new_dog = self.new(hash)
   hash[:id] = row[0]
   hash[:name] =  row[1]
-#  hash[:breed] = row[2]
-#  hash
+  hash[:breed] = row[2]
+    hash
   end
 
 
