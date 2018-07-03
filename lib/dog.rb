@@ -5,7 +5,7 @@ attr_accessor :name, :breed, :id
 def initialize(dog_hash)
   @name = dog_hash[:name]
   @breed = dog_hash[:breed]
-  @id = dog_hash[:id]
+  #@id = dog_hash[:id]
 end
 
 def self.create_table
