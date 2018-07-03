@@ -74,7 +74,6 @@ def self.find_or_create_by(hash)
 dog
 end
 
-
-
+def self.find_by_name
 
 end
