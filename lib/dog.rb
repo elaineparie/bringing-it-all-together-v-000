@@ -4,8 +4,8 @@ attr_accessor :name, :breed, :id
 
 def initialize(hash)
   binding.pry
-  name = hash[:name]
-  breed = hash[:breed]
-  id = hash[:id]
+  @name = hash[:name]
+  @breed = hash[:breed]
+  @id = hash[:id]
 end
 end
