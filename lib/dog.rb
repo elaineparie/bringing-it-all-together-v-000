@@ -25,7 +25,7 @@ def self.drop_table
   end
 
   def self.new_from_db(row)
-  new_dog = self.new
+  new_dog = self.new(dog_hash)
   binding.pry
 #  hash[:id] = row[0]
 #  hash[:name] =  row[1]
