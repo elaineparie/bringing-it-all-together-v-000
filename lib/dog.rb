@@ -65,6 +65,7 @@ end
 
 def find_or_create_by
   dog = DB[:conn].execute("SELECT * FROM songs WHERE name = ? AND breed = ?", name, breed)
+  binding.pry
  if !dog.empty?
    dog_data = dog[0]
    binding.pry
