@@ -3,6 +3,7 @@ class Dog
 attr_accessor :name, :breed, :id
 
 def initialize(dog_hash)
+  binding.pry
   @name = dog_hash[:name]
   @breed = dog_hash[:breed]
   #@id = dog_hash[:id]
@@ -26,7 +27,7 @@ def self.drop_table
     DB[:conn].execute(sql)
   end
 
-  #def self.new_from_db(row)
+  def self.new_from_db(row)
   #new_dog = self.new(dog_hash)
   #new_dog.name =  row[1]
   #new_dog.breed = row[2]
@@ -47,9 +48,6 @@ def self.drop_table
   #end
 end
 
-def update
-  sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
-  DB[:conn].execute(sql, self.name, self.breed, self.id)
-end
+
 
 end
