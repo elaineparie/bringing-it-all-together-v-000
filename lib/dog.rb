@@ -63,7 +63,7 @@ def self.find_by_id(id)
   dog
 end
 
-def find_or_create_by
+def self.find_or_create_by
   dog = DB[:conn].execute("SELECT * FROM songs WHERE name = ? AND breed = ?", name, breed)
   binding.pry
  if !dog.empty?
