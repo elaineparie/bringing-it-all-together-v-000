@@ -3,10 +3,9 @@ class Dog
 attr_accessor :name, :breed, :id
 
 def initialize(dog_hash)
-  binding.pry
   @name = dog_hash[:name]
   @breed = dog_hash[:breed]
-  #@id = dog_hash[:id]
+  @id = dog_hash[:id]
 end
 
 
@@ -27,12 +26,12 @@ def self.drop_table
     DB[:conn].execute(sql)
   end
 
-  #def self.new_from_db(row)
-  #new_dog = self.new(dog_hash)
-  #new_dog.name =  row[1]
-  #new_dog.breed = row[2]
-  #new_dog
-  #end
+  def self.new_from_db(row)
+  new_dog = self.new(dog_hash)
+  new_dog.name =  row[1]
+  new_dog.breed = row[2]
+  new_dog
+  end
 
   def save
   #  if self.id
